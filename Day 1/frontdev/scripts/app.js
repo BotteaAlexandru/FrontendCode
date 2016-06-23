@@ -62,6 +62,7 @@ function addEmployee() {
     employeesList.push(new Employee(firstName, lastName, phone, salary));
 
     showList();
+    showSalary();
 }
 
 function showSalary(){
