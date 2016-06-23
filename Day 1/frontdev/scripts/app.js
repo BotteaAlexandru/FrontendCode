@@ -40,7 +40,9 @@ function showList() {
         myTable += '<tr><td>' + employeesList[i].firstName + '</td><td>' +
             employeesList[i].lastName + '</td><td>' +
             employeesList[i].phone + '</td><td>' +
-            employeesList[i].salary + '</td></tr>';
+            employeesList[i].salary +  '</td><td>' +
+            '<button class="btn btn-default" onclick="vizualizare(' + i +')">Vizualizare</button>' + '</td><td>' +
+            '<button class="btn btn-default" onclick="stergere(' + i +')">Stergere</button>' +'</td></tr>';
     }
         myTable += '</table>';
         var container = document.getElementById('listcontainer');
@@ -75,6 +77,19 @@ function showSalary(){
 
 function deleteEmployee() {
     employeesList.pop();
+    showList();
+    showSalary();
+}
+
+function vizualizare(i) {
+    alert("First Name: " + employeesList[i].firstName + "\n" +
+        "Last Name: " + employeesList[i].lastName + "\n" +
+        "Phone: " + employeesList[i].phone + "\n" +
+        "Salary: " + employeesList[i].salary);
+}
+
+function stergere(i) {
+    employeesList.splice(i,1);
     showList();
     showSalary();
 }
