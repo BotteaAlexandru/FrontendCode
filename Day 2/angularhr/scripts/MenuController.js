@@ -6,6 +6,10 @@ hrApp.controller('MenuController',['$scope', function($scope) {
         {
             label: "OtherScope",
             url: "views/childscope.html"
+        },
+        {
+            label: "Demo Math",
+            url: "views/demomath.html"
         }
     ];
     $scope.setTitle = function() {
