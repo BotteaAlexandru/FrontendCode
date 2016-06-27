@@ -1,11 +1,8 @@
 /**
  * Created by user on 6/27/2016.
  */
-hrApp.controller('UserController', ['$scope', '$location', 'UserService', function($scope, UserService,$location) {
-
-
-
-
+hrApp.controller('UserController', ['$scope', '$location', 'UserService', function($scope,$location, UserService) {
+    //Adica aici ----------------------------------------------^^^^--------------------------------------^^^^
     $scope.back = function() {
         $location.url('/main/');
     };
@@ -17,20 +14,12 @@ hrApp.controller('UserController', ['$scope', '$location', 'UserService', functi
         $scope.id = undefined;
     };
 
-
     $scope.save = function () {
-        var user =
-        {firstName: $scope.firstName,
-            lastName: $scope.lastName,
-            age: $scope.age,
-            id: $scope.id
-        };
-        UserService.addUser(user);
-        alert("user add");
+        UserService.addUser($scope.firstName, $scope.lastName, $scope.age,$scope.id);
     };
 
     $scope.show = function () {
-        alert(UserService.get());
+        UserService.getUser($scope.index);
     }
 
 }]);

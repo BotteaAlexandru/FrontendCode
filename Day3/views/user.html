@@ -8,14 +8,11 @@
 
 <p>First Name: <input type="text" ng-model="firstName"></p>
 <p>Last Name: <input type="text" ng-model="lastName"></p>
-<p>Age: <input type="number" ng-model="age"></p>
-<p>Personal ID: <input type="number" ng-model="id"></p>
+<p>Age: <input type="text" ng-model="age"></p>
+<p>Personal ID: <input type="text" ng-model="id"></p>
 
 <p>
     <a class="btn btn-primary btn-sm" role="button" ng-click="back()">Back</a>
-</p>
-
-<p>
     <a class="btn btn-primary btn-sm" role="button" ng-click="reset()">Reset</a>
 </p>
 
@@ -24,6 +21,7 @@
 </p>
 
 <p>
+    Which User to Show: <input type="number" ng-model="index"></p>
     <a class="btn btn-primary btn-sm" role="button" ng-click="show()">Show</a>
 </p>
 
