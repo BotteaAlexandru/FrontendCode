@@ -1,0 +1,17 @@
+<ng-form name="myForm" ng-controller="FormsController" class="my-form">
+    userType: <input name="input" ng-model="userType" required>
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+    userType = {{userType}}<br>
+    <br>email: <input type="email" name="email" ng-model="userImage" required>
+    <!--<span class="error" ng-show="myForm.email.$error.required">Required!</span><br>-->
+    <span class="error" ng-show="myForm.email.$error.email">Not a valid email!</span><br>
+    email : myForm.email.$valid = {{myForm.email.$valid}}<br>
+
+    <br> myForm.input.$valid = {{myForm.input.$valid}}<br>
+    myForm.input.$error = {{myForm.input.$error}}<br>
+    myForm.$valid = {{myForm.$valid}}<br>
+    myForm.$error.required = {{!!myForm.$error.required}}<br>
+    <p>
+        <a class="btn btn-primary btn-sm" role="button" ng-show="myForm.input.$valid" ng-click="submit()">Submit</a>
+    </p>
+</ng-form>

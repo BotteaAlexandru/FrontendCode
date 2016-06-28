@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select ng-model="myColor" ng-options="color.text for color in colors" ng-change="changeColor()">
+</select>
+<select ng-model="myColor2" ng-options="color.text group by color.class for color in colors">
+</select>
+<p>
+    <span ng-class="savedColor">'Some text'</span>
+<p>Input :<input type="text" ng-model="input.text"></p>
+<!--<ng-repeat="color in colors | orderBy:'name'">-->
+<ol type="I">
+    <li ng-repeat="color in colors | filter : input"><a href="">{{color.text}}</a>
+    </li>
+</ol>
+
+</body>
+</html>
