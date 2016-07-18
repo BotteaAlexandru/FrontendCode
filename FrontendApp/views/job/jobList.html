@@ -8,7 +8,7 @@
     </tr>
     <tr ng-repeat="job in jobs">
         <td class="text-center">
-            {{job.jobId}}
+            {{job.id}}
         </td>
         <td class="text-center">
             {{job.jobTitle}}
@@ -20,9 +20,9 @@
             {{job.minSalary}}
         </td>
         <td class="text-center">
-            <button type="button" class="btn btn-link" ng-click="view(job.jobId)">View</button>
-            <button type="button" class="btn btn-link" ng-click="edit(job.jobId)">Edit</button>
-            <button type="button" class="btn btn-link" ng-click="delete(job.jobId)">Delete</button>
+            <button type="button" class="btn btn-link" ng-click="view(job.id)">View</button>
+            <button type="button" class="btn btn-link" ng-click="edit(job.id)">Edit</button>
+            <button type="button" class="btn btn-link" ng-click="delete(job.id)">Delete</button>
         </td>
     </tr>
 </table>

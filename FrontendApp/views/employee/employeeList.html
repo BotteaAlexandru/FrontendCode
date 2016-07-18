@@ -15,7 +15,7 @@
     </tr>
     <tr ng-repeat="employee in employees">
         <td class="text-center">
-            {{employee.employeeId}}
+            {{employee.id}}
         </td>
         <td class="text-center">
             {{employee.firstName}}
@@ -33,7 +33,7 @@
             {{employee.hireDate | date: 'dd-MM-yyyy'}}
         </td>
         <td class="text-center">
-            {{employee.jobId.jobTitle}}
+            {{employee.id.jobTitle}}
         </td>
         <td class="text-center">
             {{employee.salary}}

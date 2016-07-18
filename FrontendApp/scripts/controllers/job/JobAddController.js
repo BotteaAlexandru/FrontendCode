@@ -21,7 +21,7 @@ hrApp.controller('JobAddController', ['$scope', '$http', '$location', 'JobServic
         $scope.save = function(job) {
             JobService.add(job).then(function(res) {
                 $scope.job = res.data;
-                $location.url('/jobView/' + $scope.job.jobId);
+                $location.url('/jobView/' + $scope.job.id);
             }, function(err) {
                 console.log('An error occurred while adding job: ' + err.status);
             })

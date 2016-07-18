@@ -6,11 +6,11 @@
         <ng-form name="jobEditForm">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="form-group" ng-class="{ 'has-error': jobEditForm.jobId.$invalid }">
-                        <label for="jobId">Id:</label>
-                        <input type="text" id="jobId" name="jobId" class="form-control" ng-model="job.jobId" required />
-                        <span class="help-block" ng-show="jobEditForm.jobId.$error.required
-                             && jobEditForm.jobId.$dirty">{{requiredErrorMessage}}</span>
+                    <div class="form-group" ng-class="{ 'has-error': jobEditForm.id.$invalid }">
+                        <label for="id">Id:</label>
+                        <input type="text" id="id" name="id" class="form-control" ng-model="job.id" required />
+                        <span class="help-block" ng-show="jobEditForm.id.$error.required
+                             && jobEditForm.id.$dirty">{{requiredErrorMessage}}</span>
                     </div>
                 </div>
                 <div class="col-lg-6">

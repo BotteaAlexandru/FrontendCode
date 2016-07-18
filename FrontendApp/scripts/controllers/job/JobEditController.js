@@ -25,7 +25,8 @@ hrApp.controller('JobEditController', ['$scope', '$location', '$routeParams', '$
          */
         $scope.save = function(job) {
             JobService.edit(job).then(function() {
-                $location.url('/jobView/' + $scope.job.jobId);
+                console.log($scope.job);
+                $location.url('/jobView/' + $scope.job.id);
             }, function(err) {
                 console.log('An error occurred while editing job: ' + err.status);
             });
